@@ -13,7 +13,10 @@ export default function TodoListTemplate() {
   };
 
   const handleInputSubmit = () => {
-    setTodoList(prev => [...prev, { id: new Date(), task: input }]);
+    setTodoList(prev => [
+      ...prev,
+      { id: new Date(), task: input, isChecked: false }
+    ]);
     setInput("");
   };
 
@@ -21,10 +24,22 @@ export default function TodoListTemplate() {
     setTodoList(prev => prev.filter(item => item.id !== id));
   };
 
+  const handleItemCheck = id => {
+    setTodoList(prev =>
+      prev.map(item =>
+        item.id === id ? { ...item, isChecked: !item.isChecked } : item
+      )
+    );
+  };
+
   return (
     <div className="todolist-template">
       <TodayDate />
-      <TodoList todoList={todoList} onDelete={handleItemDelete} />
+      <TodoList
+        todoList={todoList}
+        onDelete={handleItemDelete}
+        onCheck={handleItemCheck}
+      />
       <TodoInput
         input={input}
         onInputChange={handleInputChange}

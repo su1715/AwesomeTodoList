@@ -8,7 +8,7 @@ React의 대표적인 과제 TodoList에 새로운 기능을 추가합니다.
 - TodoList 기본 기능
 	- [x] Create
 	- [x] Read
-	- [ ] Update
+	- [x] Update
 	- [x] Delete
 - CSS
 	- 반응형 웹
