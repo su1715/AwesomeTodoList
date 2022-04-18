@@ -15,7 +15,7 @@ export default function TodoListTemplate() {
   const handleInputSubmit = () => {
     setTodoList(prev => [
       ...prev,
-      { id: new Date(), task: input, isChecked: false }
+      { id: Date.now(), task: input, isChecked: false }
     ]);
     setInput("");
   };
@@ -42,8 +42,8 @@ export default function TodoListTemplate() {
       />
       <TodoInput
         input={input}
-        onInputChange={handleInputChange}
-        onInputSubmit={handleInputSubmit}
+        onChange={handleInputChange}
+        onSubmit={handleInputSubmit}
       />
     </div>
   );

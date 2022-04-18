@@ -1,3 +1,22 @@
+.todoitem {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color : #6867AC;
+}
+
+.todoitem:hover {
+	background-color: #FFBCD1;
+	color: white;
+}
+
+.item-task {
+	font-size: 27px;
+}
+
 .checked {
-	text-decoration-line: line-through;;
+	text-decoration-line: line-through;
 }
