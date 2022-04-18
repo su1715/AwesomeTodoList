@@ -1,6 +1,18 @@
 .todolist-template {
-	width: 35%;
+	width: 30%;
 	height: 80vh;
 	background-color: white;
-	border-radius: 8%;
+	border-radius: 5%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	box-shadow: 0 5px 18px -7px rgba(0,0,0,1);
+}
+
+.todolist-title {
+	text-align: left;
+	padding-left: 7%;
+	padding-right: 7%;
+	font-size: 50px;
+	margin-block: 5px;
 }

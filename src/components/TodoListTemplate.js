@@ -13,10 +13,11 @@ export default function TodoListTemplate() {
   };
 
   const handleInputSubmit = () => {
-    setTodoList(prev => [
-      ...prev,
-      { id: Date.now(), task: input, isChecked: false }
-    ]);
+    if (input !== "")
+      setTodoList(prev => [
+        ...prev,
+        { id: Date.now(), task: input, isChecked: false }
+      ]);
     setInput("");
   };
 
@@ -35,6 +36,8 @@ export default function TodoListTemplate() {
   return (
     <div className="todolist-template">
       <TodayDate />
+      <h1 className="todolist-title">Todo List</h1>
+      <hr />
       <TodoList
         todoList={todoList}
         onDelete={handleItemDelete}

@@ -1,0 +1,25 @@
+.todoinput-wrapper {
+	width: 100%;
+	height: 15%;
+	margin-top: auto;
+	/* background-color: teal; */
+	border-bottom-left-radius: 5%;
+	border-bottom-right-radius: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todoinput {
+	font-size: 30px;
+	width: 50%;
+	height: 40px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	padding: 10px;
+}
+
+.todoinput:focus {
+	outline: none;
+}

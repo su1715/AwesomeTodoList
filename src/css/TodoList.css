@@ -1,4 +1,7 @@
 .todolist {
 	margin-left : 7%;
 	margin-right : 7%;
+	overflow-y: auto;
+	height: 60%;
+	margin-top: auto;
 }

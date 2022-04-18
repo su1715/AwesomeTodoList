@@ -1,22 +1,27 @@
 .todoitem {
 	display: flex;
-	justify-content: space-between;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	align-items: center;
+	padding-top: 13px;
+	padding-bottom: 13px;
 	padding-left: 10px;
 	padding-right: 10px;
-	color : #6867AC;
 }
 
 .todoitem:hover {
-	background-color: #FFBCD1;
+	background-color: #6867AC;
 	color: white;
 }
 
-.item-task {
-	font-size: 27px;
+.checked {
+	color: #FFBCD1 !important;
 }
 
-.checked {
-	text-decoration-line: line-through;
+.item-task {
+	color: inherit;
+	padding-left: 25px;
+	font-size: 30px;
+}
+
+.delete {
+	margin-left: auto;
 }
