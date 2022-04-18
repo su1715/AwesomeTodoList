@@ -4,9 +4,14 @@ import { BsXSquare } from "react-icons/bs";
 import { BsCircle } from "react-icons/bs";
 import { BsCheckCircle } from "react-icons/bs";
 
-export default function TodoItem({ item, onDelete, onCheck }) {
+export default function TodoItem({ item, onDelete, onCheck, onChange }) {
+  const [input, setInput] = useState(item.task);
   const [isHover, setIsHover] = useState(false);
   const colors = ["#6867AC", "#A267AC", "#CE7BB0", "#FFBCD1"];
+
+  const handleChange = e => {
+    setInput(e.target.value);
+  };
 
   const handleClick = () => {
     onCheck(item.id);
@@ -14,6 +19,10 @@ export default function TodoItem({ item, onDelete, onCheck }) {
 
   const handleDelete = () => {
     onDelete(item.id);
+  };
+
+  const handleBlur = () => {
+    onChange(item.id, input);
   };
 
   return (
@@ -29,7 +38,14 @@ export default function TodoItem({ item, onDelete, onCheck }) {
           <BsCircle size="30" color={isHover ? "white" : "black"} />
         )}
       </div>
-      <input disabled className="item-task" value={item.task} />
+      <input
+        className="item-task"
+        value={input}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        spellcheck="false"
+        autoComplete="false"
+      />
       {isHover ? (
         <div className="delete" onClick={handleDelete}>
           <BsXSquare size="30"></BsXSquare>

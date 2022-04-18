@@ -12,6 +12,8 @@ export default function TodoInput({ input, onChange, onSubmit }) {
         onChange={onChange}
         onKeyPress={handleKeyPress}
         value={input}
+        spellcheck="false"
+        autoComplete="false"
       ></input>
     </div>
   );

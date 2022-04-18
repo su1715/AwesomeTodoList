@@ -1,12 +1,14 @@
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import "../css/TodoListTemplate.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TodayDate from "./TodayDate";
 
 export default function TodoListTemplate() {
   const [todoList, setTodoList] = useState([]);
   const [input, setInput] = useState("");
+
+  useEffect(() => console.log(todoList), [todoList]);
 
   const handleInputChange = e => {
     setInput(e.target.value);
@@ -33,6 +35,12 @@ export default function TodoListTemplate() {
     );
   };
 
+  const handleItemChange = (id, newTask) => {
+    setTodoList(prev =>
+      prev.map(item => (item.id === id ? { ...item, task: newTask } : item))
+    );
+  };
+
   return (
     <div className="todolist-template">
       <TodayDate />
@@ -42,6 +50,7 @@ export default function TodoListTemplate() {
         todoList={todoList}
         onDelete={handleItemDelete}
         onCheck={handleItemCheck}
+        onChange={handleItemChange}
       />
       <TodoInput
         input={input}

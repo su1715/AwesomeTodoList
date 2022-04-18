@@ -20,6 +20,12 @@
 	color: inherit;
 	padding-left: 25px;
 	font-size: 30px;
+	border: none;
+	background: transparent;
+}
+
+.item-task:focus {
+	outline: none;
 }
 
 .delete {
