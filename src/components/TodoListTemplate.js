@@ -3,12 +3,16 @@ import TodoList from "./TodoList";
 import "../css/TodoListTemplate.css";
 import { useState, useEffect } from "react";
 import TodayDate from "./TodayDate";
+import { setData, getData } from "../util/localStorage";
 
 export default function TodoListTemplate() {
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(() => getData("TodoList") || []);
   const [input, setInput] = useState("");
 
-  useEffect(() => console.log(todoList), [todoList]);
+  useEffect(() => {
+    setData("TodoList", todoList);
+    console.log("saved: ", todoList);
+  }, [todoList]);
 
   const handleInputChange = e => {
     setInput(e.target.value);

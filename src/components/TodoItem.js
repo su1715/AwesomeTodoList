@@ -43,7 +43,7 @@ export default function TodoItem({ item, onDelete, onCheck, onChange }) {
         value={input}
         onChange={handleChange}
         onBlur={handleBlur}
-        spellcheck="false"
+        spellCheck="false"
         autoComplete="false"
       />
       {isHover ? (

@@ -12,7 +12,7 @@ export default function TodoInput({ input, onChange, onSubmit }) {
         onChange={onChange}
         onKeyPress={handleKeyPress}
         value={input}
-        spellcheck="false"
+        spellCheck="false"
         autoComplete="false"
       ></input>
     </div>

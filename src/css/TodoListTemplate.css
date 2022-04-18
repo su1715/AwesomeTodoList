@@ -1,5 +1,6 @@
 .todolist-template {
-	width: 30%;
+	/* min-width: 800px; */
+	width: 45rem;
 	height: 80vh;
 	background-color: white;
 	border-radius: 5%;
