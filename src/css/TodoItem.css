@@ -18,6 +18,7 @@
 
 .item-task {
 	color: inherit;
+	height: 2rem;
 	padding-left: 25px;
 	font-size: 30px;
 	border: none;
