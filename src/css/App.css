@@ -17,6 +17,33 @@ input:disabled {
   pointer-events: none;
 }
 
+.navigation {
+  height: 100%; /* 100% Full-height */
+  width: 10rem; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10rem; /* Place content 60px from the top */
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    color: #6867AC;
+}
+
+.navi-link {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

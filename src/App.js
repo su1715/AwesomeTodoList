@@ -1,10 +1,21 @@
 import "./css/App.css";
-import TodoListTemplate from "./components/TodoListTemplate";
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <TodoListTemplate />
+      <nav className="navigation">
+        <Link to="">
+          <div className="navi-link">Home</div>
+        </Link>
+        <Link to="today">
+          <div className="navi-link">Today</div>
+        </Link>
+        <Link to="log">
+          <div className="navi-link">Log</div>
+        </Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
